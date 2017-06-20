@@ -3,8 +3,8 @@
 const render = (root,data) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
-  /*wrapper.append(Header());
-  wrapper.append(Cartelera(data));*/
+  wrapper.append(Home());
+  /*wrapper.append(Cartelera(data));*/
   root.append(wrapper);
 };
 
