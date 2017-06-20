@@ -1,7 +1,7 @@
 'use strict';
 
-const Home = () => {
-  const sectionHome = $('<section id="home"></section>');
+const Home = (register, update) => {
+  const sectionHome = $('<section id="home" class="container"></section>');
   const carousel = $('<div id="slides"></div>');
 
   const slide1 = $('<div class="slide"></div>');
@@ -65,8 +65,18 @@ const Home = () => {
     moveNext();
   });
 
+  registrarme.on('click', (e) => {
+    e.preventDefault();
+    state.selectedUser = register;
+
+
+  });
+
   return sectionHome;
 
 };
 
+/*const reRender = (dondeBorrar) => {
+  dondeBorrar.empty();
+}*/
 

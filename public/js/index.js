@@ -1,20 +1,36 @@
 'use strict';
 
-const render = (root,data) => {
+const render = (root,apiUsers) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
-  wrapper.append(Home());
-  /*wrapper.append(Cartelera(data));*/
+
+  /*if (state.users == null) {
+  } else {
+
+  }*/
+    wrapper.append(Home());
+    wrapper.append(Header('phone'));
+    wrapper.append(ValidNumber());
+
+
+    //wrapper.append(ValidNumber(data));
+
+
   root.append(wrapper);
 };
 
+const state = {
+  users: null,
+  selectedUser: null
+};
+
 $( _ => {
-  getUsers((err,data) => {
+  getUsers((err,apiUsers) => {
     if (err) console.log(err);
 
-    console.log(data);
+    console.log(apiUsers);
     const root = $("#root");
-    render(root,data);
+    render(root,apiUsers);
   });
 });
 

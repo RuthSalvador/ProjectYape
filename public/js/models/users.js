@@ -6,13 +6,13 @@ const getUsers = (callback) => {
     callback(null,xhr.response);
   });
 
-  xhr.open('GET','api/users');
+  xhr.open('GET','api');
   xhr.responseType = 'json';
   xhr.send();
 };
 
 /*const getUser = (id,callback) => {
-  $.get('api/users/'+id,(data) => {
+  $.get('api/users/'+id,(apiUsers) => {
     if (data.status != 200) callback(new Error("Error al obtener la peli"));
     callback(null,data);
   })
