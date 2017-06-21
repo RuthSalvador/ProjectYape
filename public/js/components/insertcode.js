@@ -19,5 +19,16 @@ const InsertCode = (update) => {
   formCode.append(reintentar);
   reintentar.append(spanContador);
 
+  const prueba = $('<button>prueba</button>');
+  sectionCode.append(prueba);
+
+  prueba.on('click', (e) => {
+    e.preventDefault();
+
+    state.pages = 3;
+    update();
+
+  });
+
   return sectionCode;
 };

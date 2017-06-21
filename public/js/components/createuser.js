@@ -24,6 +24,37 @@ const CreateUser = (update) => {
   formUser.append(cuida);
   sectionUser.append(btnCreate);
 
+  btnCreate.on('click', (e) => {
+    e.preventDefault();
+
+    state.pages = 4;
+    update();
+
+  });
+
   return sectionUser;
 
+};
+
+const SuccessRegis = (update) => {
+  const sectionSuccess = $('<section id="section-success"></section>');
+  const iconSuccess = $('<span>icon</span>');
+  const bien = $('<p>¡Bien!</p><p>Ahora puedes usar Yape</p>');
+
+  sectionSuccess.append(iconSuccess);
+  sectionSuccess.append(bien);
+
+
+  const prueba2= $('<button>prueba2</button>');
+  sectionSuccess.append(prueba2);
+
+  prueba2.on('click', (e) => {
+    e.preventDefault();
+
+    state.pages = 5;
+    update();
+
+  });
+
+  return sectionSuccess;
 };

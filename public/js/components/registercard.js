@@ -1,6 +1,6 @@
 'use strict';
 
-const RegisterCard= () => {
+const RegisterCard= (update) => {
   const sectionCard = $('<section id="section-card" class="container"></section>');
   const titleCard = $('<h3>Registra tu tarjeta débito BCP</h3>');
   const detailCard = $('<p>Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles</p>');
@@ -25,11 +25,19 @@ const RegisterCard= () => {
   formCard.append(year);
   sectionCard.append(btnCard);
 
+  btnCard.on('click', (e) => {
+    e.preventDefault();
+
+    state.pages = 6;
+    update();
+
+  });
+
   return sectionCard;
 
 };
 
-const KeyCard= () => {
+const KeyCard= (update) => {
   const sectionKey = $('<section id="section-key" class="container"></section>');
   const titleKey = $('<h3>Ingresa la clave de tu tarjeta</h3>');
   const detailKey = $('<p>Tarjeta </p>');
@@ -44,6 +52,14 @@ const KeyCard= () => {
   detailKey.append(spanCard);
   formKey.append(inputKey);
   sectionKey.append(btnKey);
+
+  btnKey.on('click', (e) => {
+    e.preventDefault();
+
+    state.pages = 7;
+    update();
+
+  });
 
   return sectionKey;
 

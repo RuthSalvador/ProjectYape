@@ -1,6 +1,6 @@
 'use strict';
 
-const ValidNumber = () => {
+const ValidNumber = (update) => {
   const sectionNumber = $('<section id="section-number" class="container"></section>');
   const titleNumber = $('<h3>Para comenzar validemos tu número</h3>');
   const detailNumber = $('<p>Recibirás un SMS con un código de validación</p>');
@@ -19,17 +19,14 @@ const ValidNumber = () => {
   formNumber.append(labelCheck);
   sectionNumber.append(btnNumero);
 
+  btnNumero.on('click', (e) => {
+    e.preventDefault();
+
+    state.pages = 2;
+    update();
+
+  });
+
   return sectionNumber;
 
-};
-
-const SuccessRegis = () => {
-  const sectionSuccess = $('<section id="section-success"></section>');
-  const iconSuccess = $('<span>icon</span>');
-  const bien = $('<p>¡Bien!</p><p>Ahora puedes usar Yape</p>');
-
-  sectionSuccess.append(iconSuccess);
-  sectionSuccess.append(bien);
-
-  return sectionSuccess;
 };
