@@ -9,8 +9,12 @@ const render = (root,apiUsers) => {
 
   }*/
     wrapper.append(Home());
-    wrapper.append(Header('phone'));
+
     wrapper.append(ValidNumber());
+    wrapper.append(InsertCode());
+    wrapper.append(CreateUser());
+    wrapper.append(SuccessRegis());
+
 
 
     //wrapper.append(ValidNumber(data));

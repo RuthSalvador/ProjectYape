@@ -27,11 +27,13 @@ button {
 .container {
   width: 100%;
   max-width: 301px;
+  text-align: center;
+  margin: auto;
+
 }
 
-#home{
+#section-home{
   position: relative;
-  margin: auto;
   overflow: hidden;
   padding: 70px 0;
 }
@@ -63,7 +65,7 @@ button {
   margin: 0 42px;
 }
 
-#home button {
+#section-home button {
   width: 301px;
 }
 
