@@ -14,6 +14,9 @@ const render = (root,apiUsers) => {
     wrapper.append(InsertCode());
     wrapper.append(CreateUser());
     wrapper.append(SuccessRegis());
+    wrapper.append(RegisterCard());
+    wrapper.append(KeyCard());
+    wrapper.append(Profile());
 
 
 

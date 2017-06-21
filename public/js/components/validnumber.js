@@ -7,7 +7,7 @@ const ValidNumber = () => {
   const formNumber = $('<form></form>');
   const inputCel = $('<input id="cel-number" type="tel">');
   const check = $('<input id="terminos" type="checkbox">');
-  const labelCheck = $('<label for="terminos">Acepto los <span class="color-turq">Términos y condiciones</span></label>')
+  const labelCheck = $('<label for="terminos">Acepto los <span class="color-turq">Términos y condiciones</span></label>');
   const btnNumero = $('<button>continuar</button>');
 
   sectionNumber.append(Header('phone'));
