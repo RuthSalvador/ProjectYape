@@ -20,6 +20,10 @@ section {
   text-align: left;
 }
 
+.text-light {
+  font-weight: 300;
+}
+
 button {
   border: none;
   border-radius: 3.5px;
@@ -174,12 +178,72 @@ label[for="terminos"] {
   border-bottom: 1px solid #8f8f8f;
 }
 
-.float-right {
+.margin-21 {
   margin: 21px;
+}
+
+.float-right {
   float: right;
 }
 
 .float-left {
-  margin: 21px;
   float: left;
+}
+
+.icon-top-right {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.img-profile {
+  width: 105px;
+  margin-bottom: 14px;
+}
+
+.img-other {
+  width: 49px;
+  height: 49px;
+}
+
+.color-white {
+  color: #ffffff;
+}
+
+.top-profile {
+  height: 35vh;
+  background-color: #451e36;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 14px;
+}
+
+.bottom-profile {
+  height: 65vh;
+  background-color: #38052a;
+
+}
+
+.move {
+  border-bottom: 1px solid #ffffff;
+  overflow: auto;
+  padding: 7px 14px;
+}
+
+.icon-next {
+  width: 21px;
+  margin: 7px 7px 0 0;
+}
+
+.first {
+  display: flex;
+  align-items: center;
+  padding: 21px;
+  justify-content: flex-start;
+}
+
+.margin-42 {
+  margin: 42px;
 }

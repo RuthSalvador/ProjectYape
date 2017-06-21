@@ -1,5 +1,8 @@
 'use strict';
 
+const question = $('<img class="icon-small icon-top-right" src="img/icons/question.png">');
+
+
 const RegisterCard= (update) => {
   const sectionCard = $('<section id="section-card" class="container"></section>');
   const titleCard = $('<h3>Registra tu tarjeta débito BCP</h3>');
@@ -11,13 +14,14 @@ const RegisterCard= (update) => {
   const inputCard = $('<input id="nro-card" type="number">');
   const escanear = $('<h5 class="color-turq"><img class="icon-small" src="img/icons/scan.png"> Escanear tarjeta</h5>');
 
-  const vto = $('<label for="month" class="float-left"><h5 class="text-left">Fecha de vencimiento </h5></label>');
-  const date = $('<div class="float-right"></div>');
+  const vto = $('<label for="month" class="float-left margin-21"><h5 class="text-left">Fecha de vencimiento </h5></label>');
+  const date = $('<div class="float-right margin-21"></div>');
   const month = $('<input id="month" type="number" placeholder="Mes">');
   const separador = $('<span> / </span>');
   const year = $('<input id="year" type="number" placeholder="Año">');
   const btnCard = $('<button>continuar</button>');
 
+  sectionCard.append(question);
   sectionCard.append(Header('bcp-logo'));
   sectionCard.append(titleCard);
   sectionCard.append(detailCard);
@@ -52,9 +56,13 @@ const KeyCard= (update) => {
   const formKey = $('<form></form>');
   const inputs2 = $('<div class="inputs"></div>');
   const icon1 = $('<label class="label" for="user-password"><img class="icon-img" src="img/icons/lock.png"></label>');
-  const inputKey = $('<input id="nro-Key" type="password">');
+  const inputKey = $('<input id="nro-Key" type="password" placeholder="- - - -">');
   const btnKey = $('<button>registrar</button>');
 
+  const back = $('<div class="text-left">&#60; Volver</div>');
+
+  sectionKey.append(back);
+  sectionKey.append(question);
   sectionKey.append(Header('bcp-logo'));
   sectionKey.append(titleKey);
   sectionKey.append(detailKey);
