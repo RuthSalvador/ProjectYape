@@ -1,34 +1,56 @@
 'use strict';
 
-const render = (root,apiUsers) => {
+const render = (root) => {
   root.empty();
   const wrapper = $('<div class="wrapper"></div>');
 
-  /*if (state.users == null) {
-  } else {
+  if (state.pages == null) {
+    wrapper.append(Home(_ => {
+      render(root);
+    }));
 
-  }*/
-    wrapper.append(Home());
+  } else if(state.pages == 1) {
+    wrapper.append(ValidNumber(_ => {
+      render(root);
+    }));
 
-    wrapper.append(ValidNumber());
-    wrapper.append(InsertCode());
-    wrapper.append(CreateUser());
-    wrapper.append(SuccessRegis());
-    wrapper.append(RegisterCard());
-    wrapper.append(KeyCard());
-    wrapper.append(Profile());
+  } else if (state.pages == 2) {
+    wrapper.append(InsertCode(_ => {
+      render(root);
+    }));
 
+  } else if (state.pages == 3) {
+    wrapper.append(CreateUser(_ => {
+      render(root);
+    }));
 
+  } else if (state.pages == 4) {
+    wrapper.append(SuccessRegis(_ => {
+      render(root);
+    }));
 
-    //wrapper.append(ValidNumber(data));
+  } else if (state.pages == 5) {
+    wrapper.append(RegisterCard(_ => {
+      render(root);
+    }));
 
+  } else if (state.pages == 6) {
+    wrapper.append(KeyCard(_ => {
+      render(root);
+    }));
+
+  } else if (state.pages == 7) {
+    wrapper.append(Profile(_ => {
+      render(root);
+    }));
+  }
 
   root.append(wrapper);
 };
 
 const state = {
   users: null,
-  selectedUser: null
+  pages: null
 };
 
 $( _ => {
@@ -37,8 +59,18 @@ $( _ => {
 
     console.log(apiUsers);
     const root = $("#root");
-    render(root,apiUsers);
+    render(root);
   });
 });
+/*
 
+$(_ => {
+  $.get('http://localhost:3000/api',(err, data) => {
+    if (err) console.log(err);
+ state.users = data;
+    console.log(data);
+    const root = $("#root");
+    render(root);
+  });
 
+});*/

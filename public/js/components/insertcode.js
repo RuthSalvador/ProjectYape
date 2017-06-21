@@ -1,6 +1,6 @@
 'use strict';
 
-const InsertCode = () => {
+const InsertCode = (update) => {
   const sectionCode = $('<section id="section-code" class="container"></section>');
   const titleCode = $('<h3>Ahora ingresa tu código</h3>');
   const detailCode = $('<p>Enviamos un SMS con el código de validación al número </p>');

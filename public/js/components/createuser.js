@@ -1,6 +1,6 @@
 'use strict';
 
-const CreateUser = () => {
+const CreateUser = (update) => {
   const sectionUser = $('<section id="section-user" class="container"></section>');
   const titleUser = $('<h3>Crea tu usuario Yape</h3>');
   const detailUser = $('<p>Ingresa un nombre, email y clave de usuario.</p>');

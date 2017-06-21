@@ -1,6 +1,6 @@
 'use strict';
 
-const Home = (register, update) => {
+const Home = (update) => {
   const sectionHome = $('<section id="section-home" class="container"></section>');
   const carousel = $('<div id="slides"></div>');
 
@@ -40,6 +40,7 @@ const Home = (register, update) => {
   sectionHome.append(next);
   sectionHome.append(registrarme);
 
+
   $("#slides div:last").insertBefore("#slides div:first");
   carousel.css("margin-left", "-"+100+"%");
 
@@ -67,8 +68,9 @@ const Home = (register, update) => {
 
   registrarme.on('click', (e) => {
     e.preventDefault();
-    state.selectedUser = register;
 
+    state.pages = 1;
+    update();
 
   });
 
