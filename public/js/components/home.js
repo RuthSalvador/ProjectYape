@@ -86,8 +86,3 @@ const Home = (update) => {
   return sectionHome;
 
 };
-
-/*const reRender = (dondeBorrar) => {
-  dondeBorrar.empty();
-}*/
-

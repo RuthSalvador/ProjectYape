@@ -29,5 +29,5 @@ const celularPost = (query,status)=>{
     console.log(data);
   });
 
-}
+};
 
