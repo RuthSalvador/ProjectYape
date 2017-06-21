@@ -3,21 +3,25 @@
 const ValidNumber = (update) => {
   const sectionNumber = $('<section id="section-number" class="container"></section>');
   const titleNumber = $('<h3>Para comenzar validemos tu número</h3>');
-  const detailNumber = $('<p>Recibirás un SMS con un código de validación</p>');
+  const detailNumber = $('<h5>Recibirás un SMS con un código de validación</h5>');
   const formNumber = $('<form></form>');
-  const inputCel = $('<input id="cel-number" type="tel">');
-  const check = $('<input id="terminos" type="checkbox">');
-  const labelCheck = $('<label for="terminos">Acepto los <span class="color-turq">Términos y condiciones</span></label>');
+  const inputs = $('<div class="inputs"></div>');
+  const inputCel = $('<input id="cel-number" type="number">');
+  const icon = $('<label class="label" for="cel-number"><img class="icon-img" src="img/icons/phoneandnumber.png"></label>');
+  const check = $('<h5 class="text-left"><input id="terminos" type="checkbox"><label for="terminos">Acepto los <span class="color-turq">Términos y condiciones.</span></label></h5>');
   const btnNumero = $('<button>continuar</button>');
 
   sectionNumber.append(Header('phone'));
   sectionNumber.append(titleNumber);
   sectionNumber.append(detailNumber);
   sectionNumber.append(formNumber);
-  formNumber.append(inputCel);
+  formNumber.append(inputs);
+  inputs.append(inputCel);
+  inputs.append(icon);
   formNumber.append(check);
-  formNumber.append(labelCheck);
   sectionNumber.append(btnNumero);
+
+
 
   btnNumero.on('click', (e) => {
     e.preventDefault();
@@ -30,3 +34,5 @@ const ValidNumber = (update) => {
   return sectionNumber;
 
 };
+
+

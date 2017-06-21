@@ -1,4 +1,4 @@
-const getUsers = (callback) => {
+/*const getUsers = (callback) => {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener('load',_ => {
@@ -18,4 +18,16 @@ const getUsers = (callback) => {
   })
 };
 */
+
+const celularPost = (query,status)=>{
+  'use strict';
+
+  $.post('http://localhost:3000/api/registerNumber',{
+    "phone" : query,
+    "terms" : status
+  },(data)=>{
+    console.log(data);
+  });
+
+}
 

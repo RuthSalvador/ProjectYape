@@ -19,6 +19,11 @@ const Home = (update) => {
   const title3 = $('<h2>Sin número de cuenta</h2>');
   const subTitle3 = $('<p class="color-gray">Elige a quién pagar desde tu lista de contactos.</p>');
 
+  const lista = $('<ul class="inline-list"></ul>');
+  const circle1 = $('<li></li>');
+  const circle2 = $('<li></li>');
+  const circle3 = $('<li></li>');
+
   const previous = $('<div id="previous">&#60;</div>');
   const next = $('<div id="next">&#62;</div>');
   const registrarme = $('<button class="btn-act">registrarme</button>');
@@ -36,6 +41,10 @@ const Home = (update) => {
   slide1.append(subTitle1);
   slide2.append(subTitle2);
   slide3.append(subTitle3);
+  sectionHome.append(lista);
+  lista.append(circle1);
+  lista.append(circle2);
+  lista.append(circle3);
   sectionHome.append(previous);
   sectionHome.append(next);
   sectionHome.append(registrarme);

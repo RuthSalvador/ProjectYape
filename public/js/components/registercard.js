@@ -3,26 +3,34 @@
 const RegisterCard= (update) => {
   const sectionCard = $('<section id="section-card" class="container"></section>');
   const titleCard = $('<h3>Registra tu tarjeta débito BCP</h3>');
-  const detailCard = $('<p>Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles</p>');
-  const formCard = $('<form></form>');
+  const detailCard = $('<h5>Por ahora solo aceptamos cuentas de ahorro y/o corriente en soles</h5>');
+  const formCard = $('<form class="margin-datos"></form>');
+  const inputs1 = $('<div class="inputs"></div>');
+
+  const icon = $('<label class="label" for="nro-card"><img class="icon-img" src="img/icons/card.png"></label>');
   const inputCard = $('<input id="nro-card" type="number">');
-  const escanear = $('<p class="color-turq">Escanear tarjeta</p>');
-  const vto = $('<label for="month"></label>');
-  const month = $('<input id="month" placeholder="Mes">');
+  const escanear = $('<h5 class="color-turq"><img class="icon-small" src="img/icons/scan.png"> Escanear tarjeta</h5>');
+
+  const vto = $('<label for="month" class="float-left"><h5 class="text-left">Fecha de vencimiento </h5></label>');
+  const date = $('<div class="float-right"></div>');
+  const month = $('<input id="month" type="number" placeholder="Mes">');
   const separador = $('<span> / </span>');
-  const year = $('<input placeholder="Año">');
+  const year = $('<input id="year" type="number" placeholder="Año">');
   const btnCard = $('<button>continuar</button>');
 
   sectionCard.append(Header('bcp-logo'));
   sectionCard.append(titleCard);
   sectionCard.append(detailCard);
   sectionCard.append(formCard);
-  formCard.append(inputCard);
+  formCard.append(inputs1);
+  inputs1.append(icon);
+  inputs1.append(inputCard);
   formCard.append(escanear);
   formCard.append(vto);
-  formCard.append(month);
-  formCard.append(separador);
-  formCard.append(year);
+  formCard.append(date);
+  date.append(month);
+  date.append(separador);
+  date.append(year);
   sectionCard.append(btnCard);
 
   btnCard.on('click', (e) => {
@@ -40,17 +48,20 @@ const RegisterCard= (update) => {
 const KeyCard= (update) => {
   const sectionKey = $('<section id="section-key" class="container"></section>');
   const titleKey = $('<h3>Ingresa la clave de tu tarjeta</h3>');
-  const detailKey = $('<p>Tarjeta </p>');
-  const spanCard = $('<span>**card</span>');
+  const detailKey = $('<h5>Tarjeta **** num</h5>');
   const formKey = $('<form></form>');
-  const inputKey = $('<input id="nro-Key" type="number">');
+  const inputs2 = $('<div class="inputs"></div>');
+  const icon1 = $('<label class="label" for="user-password"><img class="icon-img" src="img/icons/lock.png"></label>');
+  const inputKey = $('<input id="nro-Key" type="password">');
   const btnKey = $('<button>registrar</button>');
 
   sectionKey.append(Header('bcp-logo'));
   sectionKey.append(titleKey);
   sectionKey.append(detailKey);
-  detailKey.append(spanCard);
-  formKey.append(inputKey);
+  sectionKey.append(formKey);
+  formKey.append(inputs2);
+  inputs2.append(icon1);
+  inputs2.append(inputKey);
   sectionKey.append(btnKey);
 
   btnKey.on('click', (e) => {

@@ -3,11 +3,13 @@
 const InsertCode = (update) => {
   const sectionCode = $('<section id="section-code" class="container"></section>');
   const titleCode = $('<h3>Ahora ingresa tu código</h3>');
-  const detailCode = $('<p>Enviamos un SMS con el código de validación al número </p>');
+  const detailCode = $('<h5>Enviamos un SMS con el código de validación al número </h5>');
   const spanCel = $('<span>celular</span>');
   const formCode = $('<form></form>');
-  const inputCode= $('<input type="number">');
-  const reintentar = $('<p>Reintentar en </p>');
+  const inputs = $('<div class="inputs"></div>');
+  const icon = $('<label class="label" for="code"><img class="icon-img" src="img/icons/lock.png"></label>');
+  const inputCode= $('<input id="code" type="number" placeholder="- - - - - -">');
+  const reintentar = $('<h5>Reintentar en <img class="icon-small" src="img/icons/clock.png"></h5>');
   const spanContador = $('<span>regresiva</span>');
 
   sectionCode.append(Header('message'));
@@ -15,7 +17,9 @@ const InsertCode = (update) => {
   sectionCode.append(detailCode);
   detailCode.append(spanCel);
   sectionCode.append(formCode);
-  formCode.append(inputCode);
+  formCode.append(inputs);
+  inputs.append(icon);
+  inputs.append(inputCode);
   formCode.append(reintentar);
   reintentar.append(spanContador);
 

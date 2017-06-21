@@ -8,8 +8,16 @@
   color: #212121;
 }
 
+section {
+  height: 100vh;
+}
+
 .color-gray{
   color: #8f8f8f;
+}
+
+.text-left {
+  text-align: left;
 }
 
 button {
@@ -77,4 +85,101 @@ button {
 
 .color-turq {
   color: #00c3a3;
+}
+
+h5 {
+  font-weight: normal;
+  color: #8f8f8f;
+  padding-top: 7px;
+}
+
+.inline-list {
+  list-style: none;
+  padding: 21px;
+}
+
+.inline-list li {
+  display: inline-block;
+  margin: 0 7px;
+  width: 14px;
+  height: 14px;
+  background-color: #D32F2F;
+  border-radius: 50px;
+}
+
+form {
+  padding: 70px 0;
+}
+
+.inputs {
+  width: 301px;
+  border-bottom: 1px solid #8f8f8f;
+  margin-bottom: 7px;
+  position: relative;
+
+}
+
+input[type=text], input[type=number], input[type=email], input[type=password] {
+  border:none;
+  outline: none;
+  font-size: 0.8rem;
+  margin-bottom: 7px;
+  width: 100%;
+}
+
+.icon-img {
+  height: 28px;
+}
+
+.label {
+  width: 56px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+label[for="terminos"] {
+  padding-left: 7px;
+  color: inherit;
+
+}
+
+.icon-small {
+  width: 14px;
+}
+
+#form-user {
+  padding: 35px 0;
+}
+
+.margin-datos {
+  margin-bottom: 28px;
+}
+
+.icon-check {
+  width: 105px;
+  align-self: center;
+  margin-bottom: 14px;
+}
+
+#section-success {
+  background-color: #fbd43b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#month, #year {
+  width: 35px;
+  border-bottom: 1px solid #8f8f8f;
+}
+
+.float-right {
+  margin: 21px;
+  float: right;
+}
+
+.float-left {
+  margin: 21px;
+  float: left;
 }

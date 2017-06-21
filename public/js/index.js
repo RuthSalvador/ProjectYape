@@ -52,7 +52,7 @@ const state = {
   users: null,
   pages: null
 };
-
+/*
 $( _ => {
   getUsers((err,apiUsers) => {
     if (err) console.log(err);
@@ -61,8 +61,8 @@ $( _ => {
     const root = $("#root");
     render(root);
   });
-});
-/*
+});*/
+
 
 $(_ => {
   $.get('http://localhost:3000/api',(err, data) => {
@@ -73,4 +73,4 @@ $(_ => {
     render(root);
   });
 
-});*/
+});
