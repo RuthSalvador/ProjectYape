@@ -4,7 +4,7 @@ const InsertCode = (update) => {
   const sectionCode = $('<section id="section-code" class="container"></section>');
   const titleCode = $('<h3>Ahora ingresa tu código</h3>');
   const detailCode = $('<h5>Enviamos un SMS con el código de validación al número </h5>');
-  const spanCel = $('<span>celular</span>');
+  const spanCel = $('<span>'+ data.+'</span>');
   const formCode = $('<form></form>');
   const inputs = $('<div class="inputs"></div>');
   const icon = $('<label class="label" for="code"><img class="icon-img" src="img/icons/lock.png"></label>');
@@ -25,6 +25,8 @@ const InsertCode = (update) => {
 
   const prueba = $('<button>prueba</button>');
   sectionCode.append(prueba);
+
+
 
   prueba.on('click', (e) => {
     e.preventDefault();

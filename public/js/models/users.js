@@ -20,7 +20,6 @@
 */
 
 const celularPost = (query,status)=>{
-  'use strict';
 
   $.post('http://localhost:3000/api/registerNumber',{
     "phone" : query,
@@ -31,3 +30,11 @@ const celularPost = (query,status)=>{
 
 };
 
+const CodePost = (query) => {
+
+  $.post('http://localhost:3000/api/resendCode', {
+    "phone" : query
+  }, (data) => {
+    console.log(data);
+  });
+};

@@ -51,16 +51,14 @@ const ValidNumber = (update) => {
       btnNumero.on('click', (e) => {
         e.preventDefault();
 
+        celularPost(inputCel.val(),true);
+
         state.pages = 2;
         update();
 
       });
     });
   });
-
-
-
-
 
   return sectionNumber;
 
