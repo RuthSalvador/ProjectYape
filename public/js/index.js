@@ -50,7 +50,12 @@ const render = (root) => {
 
 const state = {
   users: null,
-  pages: null
+  pages: null,
+  userphone: null,
+  usercode: null,
+  useremail: null,
+  username: null,
+  usercard: null
 };
 /*
 $( _ => {
@@ -65,12 +70,13 @@ $( _ => {
 
 
 $(_ => {
-  $.get('http://localhost:3000/api',(err, data) => {
+ /* $.get('http://localhost:3000/api',(err, data) => {
     if (err) console.log(err);
- state.users = data;
-    console.log(data);
+    //state.users = data;
+    console.log(data);*/
     const root = $("#root");
     render(root);
-  });
-
+//  });
 });
+
+

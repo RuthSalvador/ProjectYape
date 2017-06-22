@@ -37,13 +37,26 @@ const CreateUser = (update) => {
   formUser.append(cuida);
   sectionUser.append(btnCreate);
 
-  btnCreate.on('click', (e) => {
-    e.preventDefault();
 
-    state.pages = 4;
-    update();
+  userName.on('change',() => {
+    userEmail.on('change', () => {
+      userPassword.on('change', () => {
 
+        btnCreate.attr('class','btn-act');
+
+        btnCreate.on('click', (e) => {
+          e.preventDefault();
+
+          state.pages = 4;
+          update();
+
+        });
+
+      });
+    });
   });
+
+
 
   return sectionUser;
 

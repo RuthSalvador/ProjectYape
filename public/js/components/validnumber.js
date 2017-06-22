@@ -33,11 +33,12 @@ const ValidNumber = (update) => {
 
       btnNumero.on('click', (e) => {
         e.preventDefault();
-
         celularPost(inputCel.val(),true);
 
         state.pages = 2;
+
         update();
+
 
       });
     });
@@ -58,10 +59,30 @@ const ValidNumber = (update) => {
 
       });
     });
+
   });
 
   return sectionNumber;
 
 };
 
+const celularPost = (inputCel,det)=>{
+
+  $.post('http://localhost:3000/api/registerNumber',{
+    phone : inputCel,
+    terms : det
+  },(data)=>{
+    console.log(data);
+
+    console.log(data.data.phone);
+    console.log(data.data.code);
+
+    //alert(data.data.code);
+    state.userphone = data.data.phone;
+    state.usercode = data.data.code;
+
+    console.log(state.userphone);
+    console.log(state.usercode);
+  });
+};
 

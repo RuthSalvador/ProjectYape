@@ -11,30 +11,19 @@
   xhr.send();
 };
 
-/*const getUser = (id,callback) => {
-  $.get('api/users/'+id,(apiUsers) => {
-    if (data.status != 200) callback(new Error("Error al obtener la peli"));
-    callback(null,data);
-  })
-};
 */
 
-const celularPost = (query,status)=>{
 
-  $.post('http://localhost:3000/api/registerNumber',{
-    "phone" : query,
-    "terms" : status
-  },(data)=>{
-    console.log(data);
-  });
 
-};
 
+
+/*
 const CodePost = (query) => {
+  state.users.data.phone = query;
 
   $.post('http://localhost:3000/api/resendCode', {
     "phone" : query
   }, (data) => {
     console.log(data);
   });
-};
+};*/
