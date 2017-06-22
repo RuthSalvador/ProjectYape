@@ -2,7 +2,6 @@
 
 const question = $('<img class="icon-small icon-top-right" src="img/icons/question.png">');
 
-
 const RegisterCard= (update) => {
   const sectionCard = $('<section id="section-card" class="container"></section>');
   const titleCard = $('<h3>Registra tu tarjeta débito BCP</h3>');
@@ -37,13 +36,26 @@ const RegisterCard= (update) => {
   date.append(year);
   sectionCard.append(btnCard);
 
-  btnCard.on('click', (e) => {
-    e.preventDefault();
 
-    state.pages = 6;
-    update();
 
+  inputCard.on('change',() => {
+    month.on('change', () => {
+      year.on('change', () => {
+
+        btnCard.attr('class','btn-act');
+
+        btnCard.on('click', (e) => {
+          e.preventDefault();
+
+          state.pages = 6;
+          update();
+
+        });
+      });
+    });
   });
+
+
 
   return sectionCard;
 
@@ -72,12 +84,17 @@ const KeyCard= (update) => {
   inputs2.append(inputKey);
   sectionKey.append(btnKey);
 
-  btnKey.on('click', (e) => {
-    e.preventDefault();
+  inputKey.on('change', () => {
 
-    state.pages = 7;
-    update();
+    btnKey.attr('class','btn-act');
 
+    btnKey.on('click', (e) => {
+      e.preventDefault();
+
+      state.pages = 7;
+      update();
+
+    });
   });
 
   return sectionKey;

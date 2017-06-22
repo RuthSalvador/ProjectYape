@@ -40,16 +40,17 @@ const InsertCode = (update) => {
     }
   }, 1000);
 
+  inputCode.on('change', () => {
 
-  prueba.on('click', (e) => {
-    e.preventDefault();
+    prueba.attr('class','btn-act');
+    prueba.on('click', (e) => {
+      e.preventDefault();
 
-    state.pages = 3;
-    update();
+      state.pages = 3;
+      update();
 
+    });
   });
-
-
 
   return sectionCode;
 };
